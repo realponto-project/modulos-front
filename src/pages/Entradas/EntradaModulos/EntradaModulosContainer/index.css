@@ -1,0 +1,47 @@
+.div-numero-entradaModulos{
+  width: 20%;
+  display: flex;
+  align-items: center
+}
+.div-sonoff-entradaModulos{
+  width: 33%;
+  display: flex;
+  align-items: center
+}
+.div-radio-entradaModulos{
+  width: 33%;
+  display: flex;
+  align-items: center
+}
+.div-numeroLacre-entradaModulos{
+  width: 30%;
+  display: flex;
+  align-items: center
+}
+.div-status-entradaModulos{
+  width: 35%;
+  display: flex;
+  align-items: center
+}
+.div-operadora-entradaModulos{
+  width: 30%;
+  display: flex;
+  align-items: center
+}
+.linha-entradaModulos{
+  margin-top: 30px;
+  width: 85%;
+  display: flex;
+}
+.linha1-entradaModulos{
+  margin-top: 30px;
+  width: 85%;
+  display: flex;
+  justify-content: space-between
+}
+.div-spaceButton{
+  width: 85%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px
+}

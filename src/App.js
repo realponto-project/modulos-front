@@ -1,26 +1,69 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { applyMiddleware, createStore } from 'redux'
+// import { connectRouter, routerMiddleware } from 'connected-react-router'
+import { Provider } from 'react-redux'
+import { PersistGate } from 'redux-persist/integration/react'
+import promise from 'redux-promise'
+import multi from 'redux-multi'
+import thunk from 'redux-thunk'
+import { persistStore, persistReducer } from 'redux-persist'
+import storage from 'redux-persist/lib/storage'
+// import { MemoryRouter } from 'react-router-dom'
+import { composeWithDevTools } from 'redux-devtools-extension'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import reducers from './store/reducers'
+import Routes from './routes'
+// import history from './routes/history'
+
+const persistConfig = {
+  key: 'root',
+  storage,
 }
 
-export default App;
+const persistedReducer = persistReducer(persistConfig, reducers)
+
+// const middlewares = [
+//   thunk,
+//   multi,
+//   promise,
+//   routerMiddleware(history)
+// ]
+
+
+// export const store = createStore(
+//   connectRouter(history)(persistedReducer, composeWithDevTools()),
+//   applyMiddleware(...middlewares)
+// )
+
+// export const store = applyMiddleware(...middlewares)(createStore)(connectRouter(history)(persistedReducer, composeWithDevTools()))
+
+export const store = applyMiddleware(thunk, multi, promise,)(createStore)(persistedReducer, composeWithDevTools())
+
+
+// export const store = applyMiddleware(thunk, multi, promise,)(createStore)(persistedReducer, composeWithDevTools())
+
+// const middlewarer = [
+//   thunk,
+//   multi,
+//   promise,
+//   routerMiddleware(history),
+//   persistedReducer,
+//   composeWithDevTools(),
+// ]
+
+// export const store = createStore(connectRouter(history)(() => {}), applyMiddleware(...middlewarer))
+
+      
+const persistor = persistStore(store)
+      
+const App = () => (
+  // <MemoryRouter >
+  <Provider store={store}>
+    <PersistGate loading={null} persistor={persistor}>
+      <Routes />
+    </PersistGate>
+  </Provider>
+
+  // </MemoryRouter>
+)
+export default App

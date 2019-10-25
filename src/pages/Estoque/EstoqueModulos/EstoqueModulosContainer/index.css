@@ -1,0 +1,28 @@
+.div-cabecalho-Gentrada{
+  margin-top: 30px;
+  width: 90%;
+  background-color: #FAFAFA;
+  height: 60px;
+  display: flex;
+  align-items: center
+}
+.cel-produto-cabecalho-Gentrada{
+  width: 42%;
+  display: flex;
+  align-items: center;
+}
+.cel-usuario-cabecalho-Gentrada{
+  width: 33%;
+  display: flex;
+  align-items: center;
+}
+.cel-data-cabecalho-Gentrada{
+  width: 22%;
+  display: flex;
+  align-items: center;
+}
+.div-separate-cabecalho-Gentrada{
+  width: 90%;
+  background-color: rgb(221, 219, 219);
+  height: 1px;
+}
