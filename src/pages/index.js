@@ -16,6 +16,11 @@ import EntradaChipsRoute from './Entradas/EntradaChips';
 import EntradaModulosRoute from './Entradas/EntradaModulos';
 import EstoqueChipsRoute from './Estoque/EstoqueChips';
 import EstoqueModulosRoute from './Estoque/EstoqueModulos';
+import ControleRoute from './Controle';
+import MonitoramentoEstoqueRoute from './Monitoramento/MonitoramentoEstoque';
+import MonitoramentoSolicitacoesRoute from './Monitoramento/MonitoramentoSolitacoes';
+import SolicitacoesNovoRoute from './Solicitacoes/SolicitacoesNovo';
+import SolicitacoesTrocaRoute from './Solicitacoes/SolicitacoesTroca';
 
 class PagesRoute extends Component {
 
@@ -73,8 +78,13 @@ class PagesRoute extends Component {
           <Route exact path='/logged/novaEmpresa/add' component={NovaEmpresaRoute} />
           <Route exact path='/logged/entradaChips/add' component={EntradaChipsRoute} />
           <Route exact path='/logged/entradaModulos/add' component={EntradaModulosRoute} />
+          <Route exact path='/logged/controle/dash' component={ControleRoute} />
+          <Route exact path='/logged/monitoramentoEstoque/dash' component={MonitoramentoEstoqueRoute} />
+          <Route exact path='/logged/monitoramentoSolicitacoes/dash' component={MonitoramentoSolicitacoesRoute} />
           <Route exact path='/logged/estoqueChips/dash' component={EstoqueChipsRoute} />
           <Route exact path='/logged/estoqueModulos/dash' component={EstoqueModulosRoute} />
+          <Route exact path='/logged/solicitacaoNovo/add' component={SolicitacoesNovoRoute} />
+          <Route exact path='/logged/solicitacaoTroca/add' component={SolicitacoesTrocaRoute} />
         </Switch>
       )
     } else {

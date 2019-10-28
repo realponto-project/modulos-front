@@ -7,9 +7,9 @@ class NovoTipoContaRoute extends Component{
 
   render() {
     return(
-        <Switch>
-          <Route exact path='/logged/novoTipoConta/add' component={NovoTipoConta}/>  
-        </Switch>
+      <Switch>
+        <Route exact path='/logged/novoTipoConta/add' component={NovoTipoConta}/>  
+      </Switch>
     )
   }
 }

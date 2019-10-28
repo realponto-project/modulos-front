@@ -21,3 +21,14 @@
   font-size: 16px;
   color: rgb(90, 90, 90);
 }
+.div-100-Gentrada{
+  width: 90%;
+  display: flex;
+  flex-direction: column
+}
+.div-lines-Rtecnico{
+  width: 100%;
+  display: flex;
+  height: 50px;
+  align-items: center
+}

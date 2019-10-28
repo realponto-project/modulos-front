@@ -7,9 +7,9 @@ class NovoUsuarioRoute extends Component{
 
   render() {
     return(
-        <Switch>
-          <Route exact path='/logged/novoUsuario/add' component={NovoUsuario}/>  
-        </Switch>
+      <Switch>
+        <Route exact path='/logged/novoUsuario/add' component={NovoUsuario}/>  
+      </Switch>
     )
   }
 }
