@@ -53,7 +53,7 @@ class EstoqueChips extends Component {
             <div className='linha2-entradaChips'>
               <div className='div-text-usuario'>Operadora:</div>
               <div className='div-operadora-estoqueChips'>
-                <Select value={this.state.operadora} style={{ width: '90%' }} onChange={this.handleChangeOperadora }>
+                <Select value={this.state.operadora} style={{ width: '90%' }} onChange={this.handleChangeOperadora}>
                   <Option value="oi">OI</Option>
                   <Option value="claro">CLARO</Option>
                   <Option value="vivo">VIVO</Option>
@@ -88,17 +88,31 @@ class EstoqueChips extends Component {
           <div className='cel-produto-cabecalho-Gentrada'>
             Produto
           </div>
-          <div className='cel-quant-cabecalho-Gentrada'>
+          <div className='cel-data-cabecalho-Gentrada'>
             Qnt.
           </div>
           <div className='cel-usuario-cabecalho-Gentrada'>
             Usuário
           </div>
-          <div className='cel-data-cabecalho-Gentrada'>
-            Data lançamento
-          </div>
           {/* {this.props.auth.typeAccount === 'MOD' ? <div className='cel-edit-cabecalho-Gentrada'/> : null} */}
         </div>
+
+        <div className='div-separate-Gentrada'/>  
+
+        <div className='div-100-Gentrada'>
+          <div className='div-lines-Rtecnico'>
+            <div className='cel-produto-cabecalho-Gentrada'>
+              TESTE
+            </div>
+            <div className='cel-data-cabecalho-Gentrada'>
+              TESTE
+            </div>
+            <div className='cel-usuario-cabecalho-Gentrada'>
+              TESTE
+            </div>
+          </div>
+        </div> 
+        <div className='div-separate-Gentrada'/> 
       </div>
     )
   }

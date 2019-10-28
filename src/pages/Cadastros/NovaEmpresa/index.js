@@ -7,9 +7,9 @@ class NovaEmpresaRoute extends Component{
 
   render() {
     return(
-        <Switch>
-          <Route exact path='/logged/novaEmpresa/add' component={NovaEmpresa}/>  
-        </Switch>
+      <Switch>
+        <Route exact path='/logged/novaEmpresa/add' component={NovaEmpresa}/>  
+      </Switch>
     )
   }
 }

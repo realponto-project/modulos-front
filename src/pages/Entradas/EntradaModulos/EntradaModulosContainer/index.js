@@ -39,6 +39,18 @@ class EntradaModulos extends Component {
     })
   }
 
+  onChangeNumero = (value) => {
+    this.setState({
+      numero: value 
+    })
+  }
+
+  onChangeNumLacre = (value) => {
+    this.setState({
+      numLacre: value 
+    })
+  }
+
   changeRadio = (e) => {
     this.setState({
       fonte: e.target.value
@@ -60,7 +72,7 @@ class EntradaModulos extends Component {
             <InputNumber 
               min={1} 
               value={this.state.numero} 
-              onChange={this.onChange} 
+              onChange={this.onChangeNumero} 
             />
           </div>
 
@@ -90,8 +102,9 @@ class EntradaModulos extends Component {
             <div className='div-text-usuario'>Número do lacre:</div>
             <InputNumber 
               min={1} 
+              name={this.state.numLacre}
               value={this.state.numLacre} 
-              onChange={this.onChange} 
+              onChange={this.onChangeNumLacre} 
             />
           </div>
 
